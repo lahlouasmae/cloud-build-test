@@ -2,7 +2,7 @@ name: Java CI  # Nom du workflow
 
 on:
   push:
-    branches: [ main ]  # Déclenche le workflow à chaque push sur la branche main
+    branches: [ master ]  # Déclenche le workflow à chaque push sur la branche main
 
 jobs:
   build:
