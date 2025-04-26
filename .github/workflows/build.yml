@@ -2,7 +2,7 @@ name: Java CI  # Nom du workflow
 
 on:
   push:
-    branches: [ master ]  # Déclenche le workflow à chaque push sur la branche main
+    branches: [ master ]  # Déclenche le workflow à chaque push sur la branche master
 
 jobs:
   build:
@@ -14,6 +14,6 @@ jobs:
         uses: actions/setup-java@v3  # Étape 2: Installation de Java
         with:
           java-version: '17'  # Version 17 de Java
-          distribution: ''
+          distribution: 'temurin'  # <<< ici, j'ai mis 'temurin'
       - name: Build with Maven
         run: mvn install  # Étape 3: Exécution de Maven
